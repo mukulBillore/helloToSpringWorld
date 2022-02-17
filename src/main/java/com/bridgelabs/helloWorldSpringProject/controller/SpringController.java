@@ -16,8 +16,12 @@ public class SpringController {
 	}
 
 	@GetMapping("/query/{name}")
-	public String sayHelloByParam(@PathVariable String name ) {
+	public String sayHelloByPathVar(@PathVariable String name ) {
 	return "hello  "+name+"  from bridge labs";
 	}
-
+	@GetMapping("/param")
+	public String sayHelloByParam(@RequestParam String name)
+	{
+		return "hello  "+name+"  from bridge labs";
+	}
 }
